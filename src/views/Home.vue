@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    {{val}}
+    <p>This a value from the Vuex store :<p/>
+    <span style="font-weight:bold;">{{val}}</span>
+    <p>Please go to the About page to edit it.</p>
   </div>
 </template>
 
@@ -13,6 +15,9 @@ export default {
     return {
       val: this.$store.state.myVar
     }
+  },
+  created () {
+    this.val = this.$store.state.myVar
   }
 }
 </script>
